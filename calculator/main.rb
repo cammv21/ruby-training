@@ -1,5 +1,4 @@
-# Simple Ruby Calculator
-
+# Optimized Ruby Calculator 
 def add(a, b)
   a + b
 end
@@ -13,7 +12,7 @@ def multiply(a, b)
 end
 
 def divide(a, b)
-  return "Cannot divide by zero" if b == 0
+  raise ZeroDivisionError, "Cannot divide by zero" if b == 0
   a / b.to_f
 end
 
@@ -26,11 +25,19 @@ def exponent(a, b)
 end
 
 def get_number(prompt)
-  print prompt
-  gets.chomp.to_f
+  loop do
+    print prompt
+    input = gets.chomp
+    begin
+      return Float(input)
+    rescue ArgumentError
+      puts "❗ Invalid input. Please enter a valid number."
+    end
+  end
 end
 
-puts "Welcome to Ruby Calculator!"
+# Optimized Ruby Calculator
+puts "🧮 Welcome to Ruby Calculator!"
 
 loop do
   puts "\nChoose an operation:"
@@ -47,27 +54,33 @@ loop do
 
   break if choice == "7"
 
-  a = get_number("Enter the first number: ")
-  b = get_number("Enter the second number: ")
+  if ("1".."6").include?(choice)
+    a = get_number("Enter the first number: ")
+    b = get_number("Enter the second number: ")
 
-  result = case choice
-  when "1"
-    add(a, b)
-  when "2"
-    subtract(a, b)
-  when "3"
-    multiply(a, b)
-  when "4"
-    divide(a, b)
-  when "5"
-    modulus(a, b)
-  when "6"
-    exponent(a, b)
+    begin
+      result = case choice
+      when "1"
+        add(a, b)
+      when "2"
+        subtract(a, b)
+      when "3"
+        multiply(a, b)
+      when "4"
+        divide(a, b)
+      when "5"
+        modulus(a, b)
+      when "6"
+        exponent(a, b)
+      end
+
+      puts "\nResult: #{result}"
+    rescue ZeroDivisionError => e
+      puts "Error: #{e.message}"
+    end
   else
-    "Invalid choice"
+    puts "Invalid option. Please choose a number between 1 and 7."
   end
-
-  puts "\nResult: #{result}"
 end
 
 puts "\n👋 Goodbye!"
