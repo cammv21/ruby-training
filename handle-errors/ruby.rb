@@ -1,8 +1,6 @@
 # Handle Errors in Ruby
 # ----------------------------
-# Ruby uses `begin-rescue` blocks to handle exceptions (errors).
-# You can also use `ensure` to run code no matter what happens,
-# and `raise` to create custom exceptions.
+
 
 # 1. Basic Error Handling with begin-rescue
 puts "\n1. Basic Error Handling:"

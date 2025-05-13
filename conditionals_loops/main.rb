@@ -1,6 +1,5 @@
 # Conditionals and Loops in Ruby
 # ------------------------------
-# Ruby provides several control structures for decision-making and iteration.
 
 # ------------------------------
 # IF Statements

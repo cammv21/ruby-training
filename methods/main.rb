@@ -1,9 +1,5 @@
 # Methods in Ruby
 # ----------------------------
-# Methods are reusable blocks of code that perform a specific task.
-# They can accept parameters and return a value.
-# Methods are defined using the `def` keyword, followed by the method name
-# and an optional list of parameters.
 
 # ----------------------------
 # Basic Method Definition

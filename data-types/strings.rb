@@ -1,9 +1,5 @@
 # Ruby Fundamentals: Strings
 
-# Strings in Ruby are mutable sequences of characters.
-# They can be created using single quotes (' ') or double quotes (" ").
-# Double-quoted strings allow interpolation (e.g., "Hello #{name}").
-
 # ----------------------------
 # String Initialization
 # ----------------------------

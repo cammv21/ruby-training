@@ -1,8 +1,5 @@
 # Ruby Fundamentals: Arrays
 
-# Arrays are ordered, mutable collections that can hold any object type,
-# including numbers, strings, booleans, other arrays, and even `nil`.
-
 # Arrays can be created with:
 # - Literal syntax: [1, 2, 3]
 # - Constructor: Array.new
